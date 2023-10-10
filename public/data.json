@@ -1,75 +1,62 @@
 [
-    {
-      "name": "Wedding Planning",
-      "image": "https://example.com/wedding-planning.jpg",
-      "price": "$1,500",
-      "description": "Let us make your dream wedding a reality. We handle every detail, so you can enjoy your special day stress-free.",
-      "buttonText": "View Details",
-      "details": {
-        "Duration": "4-6 months",
-        "Included Services": ["Venue Selection", "Decorations", "Catering", "Entertainment"]
-      },
-      "bookButton": "Book Now"
-    },
-    {
-      "name": "Corporate Conferences",
-      "image": "https://example.com/corporate-conferences.jpg",
-      "price": "$2,000",
-      "description": "Organize successful corporate events and conferences with our expert team. Impress your clients and partners.",
-      "buttonText": "View Details",
-      "details": {
-        "Duration": "1-2 days",
-        "Included Services": ["Venue Booking", "Audio-Visual Setup", "Catering", "Registration"]
-      },
-      "bookButton": "Book Now"
-    },
-    {
-      "name": "Birthday Parties",
-      "image": "https://example.com/birthday-parties.jpg",
-      "price": "$500",
-      "description": "Plan unforgettable birthday celebrations for all ages. We take care of decorations, entertainment, and more.",
-      "buttonText": "View Details",
-      "details": {
-        "Duration": "1 day",
-        "Included Services": ["Theme Setup", "Entertainment", "Cake and Food", "Party Favors"]
-      },
-      "bookButton": "Book Now"
-    },
-    {
-      "name": "Music Festivals",
-      "image": "https://example.com/music-festivals.jpg",
-      "price": "$3,000",
-      "description": "Create memorable music festivals with top-notch production. We handle stage design, sound, and logistics.",
-      "buttonText": "View Details",
-      "details": {
-        "Duration": "3 days",
-        "Included Services": ["Stage Setup", "Sound Systems", "Artist Management"]
-      },
-      "bookButton": "Book Now"
-    },
-    {
-      "name": "Charity Fundraisers",
-      "image": "https://example.com/charity-fundraisers.jpg",
-      "price": "$1,200",
-      "description": "Support noble causes by hosting charity fundraisers. We ensure your event maximizes impact.",
-      "buttonText": "View Details",
-      "details": {
-        "Duration": "1-2 days",
-        "Included Services": ["Venue Booking", "Fundraising Strategies"]
-      },
-      "bookButton": "Book Now"
-    },
-    {
-      "name": "Art Exhibitions",
-      "image": "https://example.com/art-exhibitions.jpg",
-      "price": "$800",
-      "description": "Curate exceptional art exhibitions that showcase talent. We handle setup, promotion, and more.",
-      "buttonText": "View Details",
-      "details": {
-        "Duration": "1-2 weeks",
-        "Included Services": ["Exhibit Curation", "Gallery Setup"]
-      },
-      "bookButton": "Book Now"
-    }
-  ]
-  
+  {
+    "id": "1",
+    "name": "Wedding Planning",
+    "image": "https://i.ibb.co/crbMsHg/pexels-viresh-studio-1444442.jpg",
+    "price": "$1,500",
+    "description": "Let us make your dream wedding a reality. We handle every detail, so you can enjoy your special day stress-free.",
+    "buttonText": "More Details",
+    "seemore": "Your wedding day should be perfect in every way, and that's where we come in. We specialize in crafting unforgettable weddings that reflect your unique style and love story. From choosing the ideal venue to creating stunning decorations, exquisite catering, and captivating entertainment, we'll ensure your wedding is a stress-free, magical experience.",
+    "bookButton": "Book Now"
+  },
+  {
+    "id": "2",
+    "name": "Corporate Conferences",
+    "image": "https://i.ibb.co/LYMyKcT/istockphoto-530686103-1024x1024.jpg",
+    "price": "$2,000",
+    "description": "Organize successful corporate events and conferences with our expert team. Impress your clients and partners.",
+    "buttonText": "More Details",
+    "seemore": "Elevate your corporate events to the next level with our expert conference planning services. Whether it's a one-day meeting or a multi-day conference, we handle every aspect, from top-notch venue booking to professional audio-visual setups, delectable catering, and efficient registration services. Leave a lasting impression on your clients and partners.",
+    "bookButton": "Book Now"
+  },
+  {
+    "id": "3",
+    "name": "Birthday Parties",
+    "image": "https://i.ibb.co/2yBnz36/istockphoto-508471249-170667a.webp",
+    "price": "$500",
+    "description": "Plan unforgettable birthday celebrations for all ages. We take care of decorations, entertainment, and more.",
+    "buttonText": "More Details",
+    "seemore": "Birthdays are special, and we make them even more extraordinary. From creative theme setups to exciting entertainment, delicious cakes and food, and memorable party favors, our birthday party planning services ensure every age group has a blast. Let's create unforgettable birthday memories together.",
+    "bookButton": "Book Now"
+  },
+  {
+    "id": "4",
+    "name": "Music Festivals",
+    "image": "https://i.ibb.co/gd40BZn/istockphoto-1412242466-170667a.webp",
+    "price": "$3,000",
+    "description": "Create memorable music festivals with top-notch production. We handle stage design, sound, and logistics.",
+    "buttonText": "More Details",
+    "seemore": "Bring your music festival vision to life with our expertise in production. We handle every aspect, from mesmerizing stage design to state-of-the-art sound systems and artist management. Your festival-goers will experience an electrifying and unforgettable event.",
+    "bookButton": "Book Now"
+  },
+  {
+    "id": "5",
+    "name": "Charity Fundraisers",
+    "image": "https://i.ibb.co/CmkDKd1/istockphoto-888343166-170667a.webp",
+    "price": "$1,200",
+    "description": "Support noble causes by hosting charity fundraisers. We ensure your event maximizes impact.",
+    "buttonText": "More Details",
+    "seemore": "Make a difference with our charity fundraiser event planning. We excel in venue booking and implementing effective fundraising strategies. Join us in supporting noble causes and ensuring your event has a significant impact on the community.",
+    "bookButton": "Book Now"
+  },
+  {
+    "id": "6",
+    "name": "Art Exhibitions",
+    "image": "https://i.ibb.co/G2jnBvj/istockphoto-518198142-170667a.webp",
+    "price": "$800",
+    "description": "Curate exceptional art exhibitions that showcase talent. We handle setup, promotion, and more.",
+    "buttonText": "More Details",
+    "seemore": "Celebrate artistry with our exceptional art exhibition planning. From carefully curated exhibits to seamless gallery setup and effective promotion, we ensure that the talent of artists shines through. Let's create an artistic masterpiece together.",
+    "bookButton": "Book Now"
+  }
+]

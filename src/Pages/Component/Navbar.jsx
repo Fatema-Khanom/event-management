@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
     return (
         <div>
-            <div className="navbar bg-base-100 w-11/12 m-auto shadow-md rounded-full bg-gray-400 ">
+            <div className="navbar bg-base-100 w-11/12 m-auto shadow-md rounded-full bg-gray-400">
             <div className="navbar-start">
                 <div className="dropdown">
                 <label tabindex="0" className="btn btn-ghost lg:hidden">
@@ -20,13 +20,13 @@ const Navbar = () => {
                          Home
                         </NavLink></li>
                     <li><NavLink
-                        to="/services"
+                        to="/myevents"
                         className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "" : ""
                         }
                         
                         >
-                       Services
+                       My Events
                         </NavLink></li>
                     <li><NavLink
                         to="/contactus"
@@ -52,13 +52,13 @@ const Navbar = () => {
                          Home
                         </NavLink></li>
                     <li><NavLink
-                        to="/services"
+                        to="/myevents"
                         className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "active" : ""
                         }
                         
                         >
-                       Services
+                       My Events
                         </NavLink></li>
                     <li><NavLink
                         to="/contactus"
@@ -71,8 +71,9 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn mr-4">Login</a>
-                <a className="btn-primary bg-white text-black rounded px-4 py-[4]">Register</a>
+                <a className=" mr-4">Login</a>
+                <button>Login</button>
+                <a className=" bg-white text-black rounded px-4 py-[4]">Register</a>
             </div>
             </div>
         </div>
