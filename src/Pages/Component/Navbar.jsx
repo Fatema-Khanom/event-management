@@ -14,7 +14,7 @@ const Navbar = () => {
                     <li><NavLink
                         to="/"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-blue-600 bg-white" : ""
+                            isPending ? "pending" : isActive ? "active" : ""
                         }
                         >
                          Home
@@ -29,12 +29,12 @@ const Navbar = () => {
                        Services
                         </NavLink></li>
                     <li><NavLink
-                        to="/aboutus"
+                        to="/contactus"
                         className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "active" : ""
                         }
                         >
-                        About Us
+                        Contact Us
                         </NavLink></li>
                     
                 </ul>
@@ -46,7 +46,7 @@ const Navbar = () => {
                 <li><NavLink
                         to="/"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-blue-600 bg-white" : ""
+                            isPending ? "pending" : isActive ? "active" : ""
                         }
                         >
                          Home
@@ -61,12 +61,12 @@ const Navbar = () => {
                        Services
                         </NavLink></li>
                     <li><NavLink
-                        to="/aboutus"
+                        to="/contactus"
                         className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "active" : ""
                         }
                         >
-                        About Us
+                        Contact Us
                         </NavLink></li>
                 </ul>
             </div>
