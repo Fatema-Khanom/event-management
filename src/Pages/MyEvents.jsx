@@ -1,11 +1,80 @@
 import React from 'react';
 
 const MyEvents = () => {
+    const [favorites, setFavorites] = useState([]);
+    const [noFound, setNofound] = useState(false);
+    const [isShow,setIsShow] = useState(false)
+  
+    const [totalPrice,setTotalPrice] = useState(0)
+  
+    useEffect(() => {
+      const favoriteItems   = JSON.parse(localStorage.getItem("favorites"));
+  
+      if (favoriteItems) {
+        setFavorites(favoriteItems);
+  
+        const total = favoriteItems.reduce((preValue,currentItem)=> preValue + currentItem.price,0)
+  
+        console.log(total);
+  
+        setTotalPrice(total)
+  
+  
+      } else {
+        setNofound("No Data Found");
+      }
+    }, []);
+  
+    console.log(favorites);
+  
+    const handleRemove = () => {
+      localStorage.clear();
+      setFavorites([]);
+      setNofound("No Data Found");
+    };
+  
+  
+    console.log(isShow);
+  
     return (
-        <div>
-            jfiufuyvgudyfvuy
-        </div>
+      <div>
+        {noFound ? (
+          <p className="h-[80vh] flex justify-center items-center">{noFound}</p>
+        ) : (
+          <div>
+            {favorites.length > 0 && (
+              <div>
+                  <button
+                onClick={handleRemove}
+                className="px-5 bg-green-200 block mx-auto"
+              >
+                Deleted All favorites
+              </button>
+  
+              <h1>Total price : {totalPrice}</h1>
+              </div>
+            )}
+  
+            <div className="grid grid-cols-2 gap-5">
+              {
+                  isShow ? favorites.map((card) => (
+                      <MyEvents key={card.id} card={card}></MyEvents>
+                    )) 
+                    
+                    : favorites.slice(0,2).map((card) => (
+                      <MyEvents key={card.id} card={card}></MyEvents>
+                    ))
+              }
+            </div>
+  
+            {favorites.length > 2 && <button onClick={()=>setIsShow(!isShow)} className="px-5 bg-green-200 block mx-auto">
+              {isShow ? "See less" : "See more"}
+            </button>}
+          </div>
+        )}
+      </div>
     );
-};
+  };
+     
 
 export default MyEvents;
