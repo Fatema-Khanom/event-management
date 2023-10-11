@@ -1,80 +1,68 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
+import DetailsPage from '../DetailsPage';
+
 
 const MyEvents = () => {
-    const [favorites, setFavorites] = useState([]);
+    const [myEvents, setMyEvents] = useState([]);
     const [noFound, setNofound] = useState(false);
-    const [isShow,setIsShow] = useState(false)
-  
-    const [totalPrice,setTotalPrice] = useState(0)
-  
+    const [isShow, setIsShow] = useState(false);
+    const [totalPrice, setTotalPrice] = useState(0);
+
     useEffect(() => {
-      const favoriteItems   = JSON.parse(localStorage.getItem("favorites"));
-  
-      if (favoriteItems) {
-        setFavorites(favoriteItems);
-  
-        const total = favoriteItems.reduce((preValue,currentItem)=> preValue + currentItem.price,0)
-  
-        console.log(total);
-  
-        setTotalPrice(total)
-  
-  
-      } else {
-        setNofound("No Data Found");
-      }
+        const myEventsData = JSON.parse(localStorage.getItem("myEvents"));
+
+        if (myEventsData) {
+            setMyEvents(myEventsData);
+
+            const total = myEventsData.reduce((preValue, currentItem) => preValue + parseFloat(currentItem.price), 0);
+
+            setTotalPrice(total);
+        } else {
+            setNofound("No Data Found");
+        }
     }, []);
-  
-    console.log(favorites);
-  
+
     const handleRemove = () => {
-      localStorage.clear();
-      setFavorites([]);
-      setNofound("No Data Found");
+        localStorage.clear();
+        setMyEvents([]);
+        setNofound("No Data Found");
     };
-  
-  
-    console.log(isShow);
-  
+
     return (
-      <div>
-        {noFound ? (
-          <p className="h-[80vh] flex justify-center items-center">{noFound}</p>
-        ) : (
-          <div>
-            {favorites.length > 0 && (
-              <div>
-                  <button
-                onClick={handleRemove}
-                className="px-5 bg-green-200 block mx-auto"
-              >
-                Deleted All favorites
-              </button>
-  
-              <h1>Total price : {totalPrice}</h1>
-              </div>
+        <div>
+            {noFound ? (
+                <p className="h-[80vh] flex justify-center items-center">{noFound}</p>
+            ) : (
+                <div>
+                    {myEvents.length > 0 && (
+                        <div>
+                            <button onClick={handleRemove} className="px-5 bg-green-200 block mx-auto">
+                                Delete All Events
+                            </button>
+                            
+                        </div>
+                    )}
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                        {isShow
+                            ? myEvents.map((event) => (
+                                  <DetailsPage key={event.id} card={event} />
+                              ))
+                            : myEvents.slice(0, 2).map((event) => (
+                                  <DetailsPage key={event.id} card={event} />
+                              ))}
+                    </div>
+
+                    {myEvents.length > 2 && (
+                        <button onClick={() => setIsShow(!isShow)} className="px-5 bg-green-200 block mx-auto">
+                            {isShow ? "See less" : "See more"}
+                        </button>
+                    )}
+                </div>
             )}
-  
-            <div className="grid grid-cols-2 gap-5">
-              {
-                  isShow ? favorites.map((card) => (
-                      <MyEvents key={card.id} card={card}></MyEvents>
-                    )) 
-                    
-                    : favorites.slice(0,2).map((card) => (
-                      <MyEvents key={card.id} card={card}></MyEvents>
-                    ))
-              }
-            </div>
-  
-            {favorites.length > 2 && <button onClick={()=>setIsShow(!isShow)} className="px-5 bg-green-200 block mx-auto">
-              {isShow ? "See less" : "See more"}
-            </button>}
-          </div>
-        )}
-      </div>
+        </div>
     );
-  };
-     
+};
 
 export default MyEvents;

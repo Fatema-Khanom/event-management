@@ -9,6 +9,8 @@ import ContactUs from './Pages/ContactUs.jsx'
 import Error from './Pages/ErrorPage/Error.jsx'
 import SeeMore from './Pages/Component/SeeMore.jsx'
 import MyEvents from './Pages/MyEvents.jsx'
+import Login from './Pages/Login/Login.jsx'
+import Register from './Pages/Register/Register.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,7 +34,18 @@ const router = createBrowserRouter([
     {
       path:"/myevents",
       element:<MyEvents></MyEvents>
-    }
+    },
+    {
+      path:"/login",
+      element:<Login></Login>
+    },
+    
+    {
+      path:"/register",
+      element:<Register></Register>
+    },
+    
+    
   
   ]
   },

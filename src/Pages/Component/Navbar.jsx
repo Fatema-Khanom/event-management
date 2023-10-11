@@ -70,10 +70,29 @@ const Navbar = () => {
                         </NavLink></li>
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className=" mr-4">Login</a>
-                <button>Login</button>
-                <a className=" bg-white text-black rounded px-4 py-[4]">Register</a>
+            <div className="navbar-end pr-4">
+               <ul className='menu menu-horizontal px-1'>
+                
+               <li><NavLink
+                        to="/login"
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "active" : ""
+                        }
+                        >
+                        Login
+                        </NavLink></li>
+               
+                <li><NavLink
+                        to="/register"
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "active" : ""
+                        }
+                        >
+                        Register
+                        </NavLink></li>
+               </ul>
+               
+               
             </div>
             </div>
         </div>
